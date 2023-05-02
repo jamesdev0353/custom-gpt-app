@@ -26,7 +26,7 @@ def query(request):
         print(result)
         # add if result is Quata Exausted
         # else 'ss' & 'send msg to db channel'
-        ss = SaveQueries(nice,result)
+        ss = SaveQueries(nice,result) #need to check if this is working 
         ss.save()
 
 
