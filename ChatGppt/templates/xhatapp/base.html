@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>XhatGpt</title>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- send button !--  -->
+</head>
+
+<body class="text-bg-secondary">
+  <header>
+    <!-- nav one -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-darklight">
+          <div class="container">
+            <a class="navbar-brand" href="#">XhatGpt</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+      </div>
+    </nav>
+    <!-- Sec nav -->
+    <nav class="navbar navbar-expand-sm navbar-light text-bg-secondary fixed-bottom">
+        <div class="container">
+          <!-- <a class="navbar-brand" href="#">ChatGpt</a> -->
+            <div class="card text-bg-dark" style="width: 100%";>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="input-group mb-0 pb-0">
+                            <input type="text" name="queryinput" class="form-control text-bg-dark" placeholder="Send a message...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                                  </svg></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                    <a align="center" class="link-underline-light" href="https://github.com/Roshan-Here">&copy; <strong><span>Roshan-Here</span></strong></a>
+            </div>
+        </div>
+    </nav>
+  </header>
+  <!-- block here -->
+  <main class="mt-3">
+    <!-- 1 checking -->
+    {% block body_block %}
+    {% endblock %}
+        <div class="container">
+            <div class="card text-bg-dark mb-3" style="height: 25rem;">
+                <div class="card-body">
+                    <!-- can set this on about page -->
+                    <h1 class="card-title">About - XhatGpt</h1>
+                    <p style="color: #B8336A;" class="card-text"><marquee>!!! XhatGpt is using official OpenAi API So,Please don't spam!!!</marquee></p>
+                    <p class="card-text" id="myText">XhatGpt with telegram database channel support, need a telegram bot token, telegram api, Pyrogram preinstalled and mainly OpenAi API Key: which will fetch results</p>
+                    <!-- <p class="card-text" id="typing-text"></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- 2 checking -->
+        <div class="container">
+            <div class="card text-bg-dark mb-3" style="height: 25rem;">
+                <div class="card-body">
+                    <h1 class="card-title">XhatGpt</h1>
+                    <p class="card-text" id="myText">its me leo....</p>
+                </div>
+            </div>
+        </div>
+  </main>
+  <!-- upto block -->
+  <footer class="footer mt-auto py-3 bg-secondary">
+        <!-- <div class="container">
+            <div class="card">
+                <div class="card-body">
+                <form>
+                <div class="input-group mb-0">
+                    <input type="text" class="form-control text-bg-dark" placeholder="Type your message here...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Send</button>
+                    </div>
+                </div>
+                </form>
+                </div>
+            </div>
+        </div> -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+<!-- Mov- this -to- JavaScript  -->
+<script>
+    const text = document.getElementById("myText").textContent;
+    let i = 0;
+  
+    function typeText() {
+      if (i < text.length) {
+        document.getElementById("myText").innerHTML = text.substring(0, i) + "|";
+        i++;
+        setTimeout(typeText, 100); // Adjust the typing speed here
+      } else {
+        document.getElementById("myText").innerHTML = text;
+      }
+    }
+  
+    typeText();
+  </script>
+<!-- End- this -to- JavaScript  -->
+
+
+
+<!-- <script>
+        var delay = 100;  // The delay between each character (in milliseconds)
+        var element = document.getElementById("typing-text");  // The element to type the text in
+        var i = 0;
+        
+        function type(text) {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(function() {type(text)}, delay);
+          }
+        }
+        
+        // Call the function with the text you want to type
+        type("XhatGpt with telegram database channel support, need a telegram bot token, telegram api, Pyrogram preinstalled and mainly OpenAi API Key: which will fetch results")
+</script> -->
+
+</body>
+
+</html>
