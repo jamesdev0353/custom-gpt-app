@@ -1,5 +1,14 @@
 {% extends 'xhatapp/base.html' %}
 
 {% block body_block %}
-
+<div class="container">
+    <div class="card text-bg-dark mb-3" style="height: 25rem;">
+        <div class="card-body">
+            <!-- can set this on about page -->
+            <h1 class="card-title">Q:- {{ query }} </h1>
+            <p class="card-text" id="myText">{{ resul }}</p>
+            <!-- <p class="card-text" id="typing-text"></p> -->
+        </div>
+    </div>
+</div>
 {% endblock %}
