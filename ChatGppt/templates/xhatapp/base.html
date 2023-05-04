@@ -65,14 +65,14 @@
     {% block body_block %}
     {% endblock %}
         <!-- 2 checking -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="card text-bg-dark mb-3" style="height: 25rem;">
                 <div class="card-body">
                     <h1 class="card-title">XhatGpt</h1>
                     <p class="card-text" id="myText">its me leo....</p>
                 </div>
             </div>
-        </div>
+        </div> -->
   </main>
   <!-- upto block -->
   <footer class="footer mt-auto py-3 bg-secondary">
@@ -105,10 +105,10 @@
   var myParagraph = document.getElementById("myText"); 
   var originalText = myParagraph.innerHTML;
   var newText = originalText.replace(/\s{2,}/g, "<br>"); //-replace every third space with line break
-  myParagraph.innerHTML = newText; 
-</script>
-<!-- <script>
-    const text = document.getElementById("myText").textContent;
+  myParagraph.innerHTML = newText;
+  
+  // on same tag... 
+  const text = document.getElementById("myText").textContent;
     let i = 0;
   
     function typeText() {
@@ -122,27 +122,9 @@
     }
   
     typeText();
-  </script> -->
+</script>
 <!-- End- this -to- JavaScript  -->
 
-
-
-<!-- <script>
-        var delay = 100;  // The delay between each character (in milliseconds)
-        var element = document.getElementById("typing-text");  // The element to type the text in
-        var i = 0;
-        
-        function type(text) {
-          if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(function() {type(text)}, delay);
-          }
-        }
-        
-        // Call the function with the text you want to type
-        type("XhatGpt with telegram database channel support, need a telegram bot token, telegram api, Pyrogram preinstalled and mainly OpenAi API Key: which will fetch results")
-</script> -->
 
 </body>
 
