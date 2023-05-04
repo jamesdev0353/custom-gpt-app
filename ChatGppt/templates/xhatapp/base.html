@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active" href="{% url 'xhatapp:aboutx' %}" aria-current="page">About <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
@@ -104,13 +104,7 @@
   </script>
 
 <!-- Mov- this -to- JavaScript  -->
-<script>
-  var myParagraph = document.getElementById("myText"); 
-  var originalText = myParagraph.innerHTML;
-  var newText = originalText.replace(/\s{2,}/g, "<br>"); //-replace every third space with line break
-  myParagraph.innerHTML = newText;
-  
-  // on same tag... 
+<!-- <script>   
   const text = document.getElementById("myText").textContent;
     let i = 0;
   
@@ -118,14 +112,14 @@
       if (i < text.length) {
         document.getElementById("myText").innerHTML = text.substring(0, i) + "|";
         i++;
-        setTimeout(typeText, 100); // Adjust the typing speed here
+        setTimeout(typeText, 400); // Adjust the typing speed here
       } else {
         document.getElementById("myText").innerHTML = text;
       }
     }
   
     typeText();
-</script>
+</script> -->
 <!-- End- this -to- JavaScript  -->
 
 

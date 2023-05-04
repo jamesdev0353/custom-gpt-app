@@ -108,4 +108,4 @@ def login_usr(request):
 @login_required
 def usr_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('llooggin'))
+    return HttpResponseRedirect(reverse('indexpage'))
