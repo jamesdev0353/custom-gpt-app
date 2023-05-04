@@ -79,28 +79,29 @@ def create(request):
 
 
 def login_usr(request):
-    if request.POST == 'POST':
+    if request.method == 'POST':
         usrname = request.POST.get('Username')
         passwrd = request.POST.get('passsw')
+        print(usrname,passwrd)
 
-        usr = authenticate(username=usrname,password=passwrd)
+        user = authenticate(username=usrname, password=passwrd)
 
-        if usr:
-            if usr.is_active:
-                login(request, usr)
+        if user:
+            if user.is_active:
+                login(request, user)
+                print("checkked")
                 return HttpResponseRedirect(reverse('xhat'))
+          
             else:
                 print("Account not usable...")
                 return HttpResponse("Account not usable...")
-
         else:
             print(f"""
                 somone tried to login!!!
                 username : {usrname}
                 password : {passwrd}
                 """)
-        return HttpResponse("OOpppzz Invalid Login Details....")
-
+            return HttpResponse("OOpppzz Invalid Login Details....")
     else:
         return render(request, 'xhatapp/login.html')
 

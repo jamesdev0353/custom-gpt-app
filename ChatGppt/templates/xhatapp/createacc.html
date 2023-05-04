@@ -75,12 +75,20 @@
                 <div class="card-body">
                     {% if created %}
                     <h3>Already registed Back to login....</h3>
+                    <a name="" id="" class="btn btn-info" href="{% url 'indexpage' %}" role="button">Login..</a>
+                    <br>
                     {% else %}
                         <form enctype="multipart/form-data" method="POST">
                             {% csrf_token %}
                             {{ acc_form.as_p }}
                             <input type="submit" value="Create Account">
                         </form>
+                        <div class="mb-3">
+                        <form action="{% url 'indexpage' %}">
+                        <a>Go to Login page :</a>
+                        <input style="margin-left: 4%;" name="" id="" class="btn btn-info" type="submit" value="Login">
+                      </form>
+                      </div>
                     {% endif %}
                     <br>
                 </div>
