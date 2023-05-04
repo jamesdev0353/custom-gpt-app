@@ -102,10 +102,10 @@
 
 <!-- Mov- this -to- JavaScript  -->
 <script>
-  var myParagraph = document.getElementById("myText"); // Get the paragraph element
-  var originalText = myParagraph.innerHTML; // Get the original text of the paragraph
-  var newText = originalText.replace(/\s{2,}/g, "<br>"); // Replace every third space with a space and a line break
-  myParagraph.innerHTML = newText; // Update the paragraph with the new text
+  var myParagraph = document.getElementById("myText"); 
+  var originalText = myParagraph.innerHTML;
+  var newText = originalText.replace(/\s{2,}/g, "<br>"); //-replace every third space with line break
+  myParagraph.innerHTML = newText; 
 </script>
 <!-- <script>
     const text = document.getElementById("myText").textContent;

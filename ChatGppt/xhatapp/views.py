@@ -20,8 +20,8 @@ def about(request):
 
 
 def query(request):
-    nice = None
-    result = None
+    nice = "Do you have a question you'd like me to answer?"
+    result = "....."
     if request.method == 'POST':
         nice = request.POST.get('queryinput')
         print(nice)
