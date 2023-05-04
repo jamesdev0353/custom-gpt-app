@@ -75,18 +75,20 @@
                     <p style="color: #B8336A;" class="card-text"><marquee>!!! XhatGpt is using official OpenAi API So,Please don't spam!!!</marquee></p>
                     <!-- <p class="card-text" id="myText">XhatGpt with telegram database channel support, need a telegram bot token, telegram api, Pyrogram preinstalled and mainly OpenAi API Key: which will fetch results</p> -->
                     <div class="mb-3">
-                    <label for="username" class="form-label">Username:</label>
+                    <form action="{% url 'llooggin' %}" method="POST">
+                    {% csrf_token %}
+                    <label for="Username" class="form-label">Username:</label>
                     <input type="text"
                         class="form-control" name="Username" id="" aria-describedby="helpId" placeholder="User Name">
                     <!-- <small id="helpId" class="form-text text-muted"></small> -->
                         <div class="mb-3">
-                        <label for="" class="form-label">Password</label>
-                        <input type="password" class="form-control" name="" id="" placeholder="Enter Password">
+                        <label for="passsw" class="form-label">Password</label>
+                        <input name="passsw" type="password" class="form-control" id="" placeholder="Enter Password">
                         </div>
-                        <a style="margin-left: 2%;" href=""> Create Account</a>
-                        <input style="margin-left: 18%;" name="" id="" class="btn btn-info" type="button" value="Login">
+                        <a style="margin-left: 2%;" href="{% url 'createeacc' %}"> Create Account</a>
+                        <input style="margin-left: 18%;" name="" id="" class="btn btn-info" type="submit" value="Login">
+                      </form>
                     </div>
-                    
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 from django import forms
-from djagno.contrib.auth.models import User
+from django.contrib.auth.models import User
 from xhatapp.models import SaveQueries
 
 class usserform(forms.ModelForm):

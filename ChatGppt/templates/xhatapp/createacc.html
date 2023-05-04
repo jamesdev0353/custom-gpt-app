@@ -67,10 +67,22 @@
     <br>
     <br>
     <div class="container">
+      <br>
+      <br>
         <div class="row">
             <div class="col-md-6 mx-auto text-bg-dark mb-3" style="height: 100%; width: 50; border-radius: 5%;">
+              <br>
                 <div class="card-body">
-                    {% csrf_token %}
+                    {% if created %}
+                    <h3>Already registed Back to login....</h3>
+                    {% else %}
+                        <form enctype="multipart/form-data" method="POST">
+                            {% csrf_token %}
+                            {{ acc_form.as_p }}
+                            <input type="submit" value="Create Account">
+                        </form>
+                    {% endif %}
+                    <br>
                 </div>
             </div>
         </div>
