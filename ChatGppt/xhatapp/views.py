@@ -50,8 +50,6 @@ def query(request):
         #     print(data.returnquery)
         #     print(data.query_time)
         # my_result_dict = {'query':nice,'resul':result}
-# username = leo
-# pass : leoleo12
 
     # return render(request, 'xhatapp/index.html', context=my_result_dict)
     return render(request, 'xhatapp/index.html',{'query':nice,'resul':result})
