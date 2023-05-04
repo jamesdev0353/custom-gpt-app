@@ -1,9 +1,19 @@
 from django.shortcuts import render
 from xhatapp.models import SaveQueries
 from xhatapp.Config import BravoSis
+from xhatapp.form import usserform
 # from datetime import datetime 
 from django.utils import timezone
 # Create your views here.
+
+
+###################### -login
+from django.contrib.auth import authenticate,login,logout
+from django.http import HttpResponse,HttpResponseRedirect
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+
+
 
 # initializing 
 wow = BravoSis()
@@ -45,3 +55,10 @@ def query(request):
 
     # return render(request, 'xhatapp/index.html', context=my_result_dict)
     return render(request, 'xhatapp/index.html',{'query':nice,'resul':result})
+
+
+def create(request):
+    acc_created = False
+
+    if request.method == 'POST':
+        usr_form =
