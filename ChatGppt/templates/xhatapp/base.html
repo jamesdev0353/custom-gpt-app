@@ -19,7 +19,7 @@
     <!-- nav one -->
     <nav class="navbar navbar-expand-sm navbar-light bg-darklight">
           <div class="container">
-            <a class="navbar-brand" href="#">XhatGpt</a>
+            <a class="navbar-brand" href="{% url 'xhat' %}">XhatGpt</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -112,7 +112,7 @@
       if (i < text.length) {
         document.getElementById("myText").innerHTML = text.substring(0, i) + "|";
         i++;
-        setTimeout(typeText, 400); // Adjust the typing speed here
+        setTimeout(typeText, 20); // Adjust the typing speed here
       } else {
         document.getElementById("myText").innerHTML = text;
       }
