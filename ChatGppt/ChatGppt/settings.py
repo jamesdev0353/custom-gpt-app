@@ -24,7 +24,7 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 SECRET_KEY = "django-insecure-)7t5_nc^h891_9yd%y3=h6=jjjo#ds214f#5dr^-#_anf+fipz"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.versl.app']
 
