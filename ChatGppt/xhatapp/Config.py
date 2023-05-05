@@ -12,11 +12,11 @@ class BravoSis:
     #i'm not going through basics
 
     def __init__(self):
-        self.api_id = 7880410
-        self.api_hash = "72fb94902bbee2b74318b3d499c1096e"
-        self.bot_token = "1889350515:AAEPQ6RII34y5G2aaPD26ILkrhlCfSxzpZM"
+        # self.api_id = 7880410
+        # self.api_hash = "72fb94902bbee2b74318b3d499c1096e"
+        # self.bot_token = "" 
         # leosscreation@gmail.com
-        self.openai_api_key = "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"
+        self.openai_api_key = "" # set your own api value
         # snm20cs.muhammedroshanps@gmail.com
         # self.openai_api_key = "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" #get this value from https://beta.openai.com/.
         self.model = "text-davinci-003" # use any of these [text-davinci-002,text-davinci-001]
