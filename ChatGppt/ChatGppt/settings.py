@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-)7t5_nc^h891_9yd%y3=h6=jjjo#ds214f#5dr^-#_anf+fipz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.versl.app']
 
 
 # Application definition
@@ -69,7 +69,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "ChatGppt.wsgi.application"
+# to-doploy 
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Database
